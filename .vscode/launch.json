@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/_CP_CODEFORCES_CONTEST/CODEFORCES-DIV3/contest_977",
-      "program": "d:/_CP_CODEFORCES_CONTEST/CODEFORCES-DIV3/contest_977/build/Debug/outDebug",
+      "cwd": "d:/_CP_CODEFORCES_CONTEST/CODEFORCES-DIV3/2018/contest_977",
+      "program": "d:/_CP_CODEFORCES_CONTEST/CODEFORCES-DIV3/2018/contest_977/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
