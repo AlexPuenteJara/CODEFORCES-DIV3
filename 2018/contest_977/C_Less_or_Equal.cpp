@@ -8,14 +8,31 @@ int n;
 int MOD=1e9+7;
 const int inf=1e9;
 const int MAXN=3e5+5;
-int a[MAXN];
+vector<int> a;
 signed main() {
     fast
-    int t;
-	cin>>t;
-	while (t--) {
-		cin>>n;
-		
+    int k;
+	cin>>n>>k;
+	for(int i=0;i<n;i++){
+		int val;
+		cin>>val;
+		a.push_back(val);
+	}
+
+	sort(a.begin(),a.end());
+
+	if(k==0){
+			if(a[0]==1){
+				cout<<-1<<"\n";
+			}else{
+				cout<<a[0]-1<<"\n";
+			}		
+		}else{
+			if(a[k-1]==a[k]){
+				cout<<-1<<"\n";
+			}else{
+				cout<<a[k-1]<<"\n";		
+			}
 	}
 	return 0;
 }
