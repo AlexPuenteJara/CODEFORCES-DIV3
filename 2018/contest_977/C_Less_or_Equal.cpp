@@ -22,17 +22,17 @@ signed main() {
 	sort(a.begin(),a.end());
 
 	if(k==0){
-			if(a[0]==1){
-				cout<<-1<<"\n";
-			}else{
-				cout<<a[0]-1<<"\n";
-			}		
+		if(a[0]==1){
+			cout<<-1<<"\n";
 		}else{
-			if(a[k-1]==a[k]){
-				cout<<-1<<"\n";
-			}else{
-				cout<<a[k-1]<<"\n";		
-			}
+			cout<<a[0]-1<<"\n";
+		}		
+	}else{
+		if(a[k-1]==a[k]){
+			cout<<-1<<"\n";
+		}else{
+			cout<<a[k-1]<<"\n";		
+		}
 	}
 	return 0;
 }

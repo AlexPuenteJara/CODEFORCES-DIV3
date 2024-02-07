@@ -8,14 +8,16 @@ int n;
 int MOD=1e9+7;
 const int inf=1e9;
 const int MAXN=3e5+5;
-int a[MAXN];
+pair<int,int> a[128];
 signed main() {
-    fast
-    int t;
-	cin>>t;
-	while (t--) {
-		cin>>n;
-		
+	cin>>n;
+	for(int i = 1;i<=n;i++){
+		int j;
+		cin>>j;
+		for(a[i].second=j;j%3==0;j/=3)
+			--a[i].first;
 	}
+	sort(a+1,a+1+n);
+	for(int i = 1;i<=n;i++)cout<<a[i].second<<' ';
 	return 0;
 }
