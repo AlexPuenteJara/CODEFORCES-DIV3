@@ -11,11 +11,20 @@ const int MAXN=3e5+5;
 int a[MAXN];
 signed main() {
     fast
-    int t;
-	cin>>t;
-	while (t--) {
-		cin>>n;
-		
+   	cin>>n;
+	string s;
+	cin>>s;
+	int cont=0,ans=0;
+	for(int i=0;i<n;i++){
+		if(s[i]=='x'){
+			cont++;
+		}else{			
+			ans+=max((int)0,cont-2);
+			cont=0;
+		}
 	}
+	ans+=max((int)0,cont-2);
+
+	cout<<ans<<"\n";
 	return 0;
 }

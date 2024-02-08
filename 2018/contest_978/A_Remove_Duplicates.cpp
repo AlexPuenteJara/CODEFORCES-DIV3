@@ -8,14 +8,19 @@ int n;
 int MOD=1e9+7;
 const int inf=1e9;
 const int MAXN=3e5+5;
-int a[MAXN];
-signed main() {
-    fast
-    int t;
-	cin>>t;
-	while (t--) {
-		cin>>n;
+int a[MAXN],b[MAXN],t;
+
+signed main(){
+	cin>>n;
+	for(int i=1;i<=n;i++){
+		cin>>a[i];
 		
+		if(b[a[i]]==0)t++;//cuenta los elementos diferentes de a[i]
+		b[a[i]]=i;//guarda el índice del último valor de a[i] en el array 
 	}
-	return 0;
+	cout<<t<<endl;
+	for(int i=1;i<=n;i++){
+		if(b[a[i]]==i)
+			cout<<a[i]<<" ";
+	}		
 }
