@@ -8,14 +8,33 @@ int n;
 int MOD=1e9+7;
 const int inf=1e9;
 const int MAXN=3e5+5;
-int a[MAXN];
-signed main() {
-    fast
-    int t;
-	cin>>t;
-	while (t--) {
-		cin>>n;
-		
+vector<int>graph[MAXN];
+bool vis[MAXN];
+bool g;
+void dfs(int x){
+	vis[x]=1;
+	if (graph[x].size()!=2)g=0;
+	for (int i:graph[x])
+		if (!vis[i])dfs(i);
+}
+signed main(){
+	int n,m;
+	cin>>n>>m;
+	while(m--){
+		int x,y;
+		cin>>x>>y;
+		graph[x].push_back(y);
+		graph[y].push_back(x);
 	}
-	return 0;
+	int ans=0;
+	for (int i=1;i<=n;i++){
+		g=1;
+		if (!vis[i]){
+			dfs(i);
+			if (g){
+				ans++;
+			}
+		}
+	}
+	cout<<ans<<endl;
 }
