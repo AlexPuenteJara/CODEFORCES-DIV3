@@ -11,9 +11,10 @@ const int MAXN=3e5+5;
 int a[MAXN];
 signed main() {
     fast
-    int w;
-	cin>>n>>w;
-	for(int i=0;i<n;i++){
+    int t;
+	cin>>t;
+	while (t--) {
+		cin>>n;
 		
 	}
 	return 0;

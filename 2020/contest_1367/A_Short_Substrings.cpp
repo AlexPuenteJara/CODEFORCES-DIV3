@@ -11,10 +11,18 @@ const int MAXN=3e5+5;
 int a[MAXN];
 signed main() {
     fast
-    int w;
-	cin>>n>>w;
-	for(int i=0;i<n;i++){
-		
+    int t;
+	cin>>t;
+	while (t--) {
+		string b;
+		cin>>b;
+		cout<<b[0];
+		for(int i=0;i<b.size();i++){
+			if(i%2==1){
+				cout<<b[i];
+			}
+		}
+		cout<<"\n";		
 	}
 	return 0;
 }
